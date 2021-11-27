@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <link rel="stylesheet" href="loan.css">
+</head>
+<body>
+    <div id="border">   <!--border-->
+        
+        <div id="emi-calculation">    <!--calculation part-->
+          
+          <p id="title"><strong>EMI Calculator<strong></p> 
+            
+            <div class="section">         <!--loan amount with input-->
+              <label id="loanamount" class="label">Loan Amount:</label>
+              <input type="number" class="input" id="value1" placeholder="Enter Loan amount.."></input>
+            </div>                        <!--loan amount with input closing-->
+            <br>
+            <div class="section">   <!--interest rate with input-->
+               <label id="interestrate" class="label">Interest Rate(%) :</label>
+              <input type="number" class="input" id="value2"  placeholder="Enter per year.."></input>
+            </div>              <!--interest rate with input closing-->
+            <br>
+            <div class="section"> <!--loan terms with input-->
+               <label id="loanduration" class="label">Loan (Months):</label>
+              <input type="number" class="input" id="value3" placeholder="Enter in months"></input>
+            </div>   <!--loan terms with input closing-->
+        
+       <br>
+       <br>
+       <br>
+     
+      <div class="submit">           <!--button-->
+     <button type="submit" id="calc" onclick="calculation()">Calculate</button>
+      </div>                          <!--button closing-->
+      
+        </div>    <!--Calculation part closing-->
+        
+        <div id="emi-output">
+          <div class="result">Monthly Interest: <span id="monthly-interest"></span>
+          </div>
+          <div class="result">Monthly Payment: <span id="monthly-payment"></span>
+          </div>
+          <div class="result">Total Repayment: <span id="total-repayment"></span>
+          </div>
+          <div class="result">Total Interest Cost: <span id="total-interest"></span>
+          </div>
+          <br><br><br>
+          
+        <div class="submit">           <!--button-->
+     <button type="submit" id="reset" onclick="reset()">Reset</button>
+      </div>                          <!--button closing-->  
+          
+        </div>
+      
+      </div> <!--border closing-->
+      <script src="loan.js"></script>
+</body>
+</html>
